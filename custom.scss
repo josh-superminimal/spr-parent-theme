@@ -1,0 +1,463 @@
+/*!
+Theme Name: Superminimal
+Theme URI: http://underscores.me/
+Author: Superminimal
+Author URI: http://superminimal.com.au
+Description: Custom theme: Superminimal, developed by Superminimal
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: spr
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Superminimal is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/* --- Sass Vars --- */
+$fontello: 'Fontello';
+$transition: all 0.18s ease-in-out;
+/* --- END vars --- */
+
+
+body {
+    font-size: 16px;
+    line-height: 1.8;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Accessibility - remember to replace these --- */
+
+:focus,
+a,
+a:focus,
+input,
+button,
+button:focus,
+select,
+textarea,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="submit"]:focus,
+textarea:focus {
+    outline: none; //These are fugly
+}
+
+.btn:focus,
+.btn.focus {
+    box-shadow: none;
+}
+/* --- End Accessibility --- */
+
+/* --- Links --- */
+    
+a,
+a i {
+    transition: $transition;
+}
+
+a,
+a:visited,
+a:active,
+a:focus,
+a:hover {
+    color: inherit;
+}
+
+// Offset anchor links
+a.anchor {
+    display: block;
+    position: relative;
+    top: -80px;
+    visibility: hidden;
+}
+
+// main content links: underline on hover
+.article-content a {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+/* --- END Links --- */
+
+/* --- General --- */
+//only give margin P tags that follow anything else
+p {
+    margin: 0;
+    &+* {
+        margin-top: 1em;
+    }
+}
+.italic {
+    font-style: italic;
+}
+
+.entry-content {
+    margin: 0;
+}
+
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    clear: both;
+    position: relative;
+}
+
+//OVERRIDE DEFAULT BOOTSTRAP CONTAINER BEHAVIOUR and stretch across on small devices
+//.. When the screen is eg 860px wide, by default the container will be 720px wide
+//that is way too small and is frankly annoying behaviour
+// EXCEPT for .container-std-break when we want a normal container
+@media (max-width: 991px) {
+    .container:not(.container-std-break) {
+        max-width: 100%;
+    }
+}
+
+%custom-container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-wide {
+    @extend %custom-container;
+    max-width: 1250px;
+}
+
+.container-narrow {
+    @extend %custom-container;
+    max-width: 1000px;
+}
+
+.container-extra-narrow {
+    @extend %custom-container;
+    max-width: 730px;
+}
+
+.flex-grow,
+.col-grow {
+    flex-grow: 1;
+}
+
+.flex-shrink,
+.col-shrink {
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+
+/* --- END General --- */
+
+
+/* --- Header --- */
+/* --- Header / Sticky Header --- */
+    
+#masthead {
+    transition: all 0.3s ease-in-out;
+    hr {
+        border-color: white;
+        border-width: 2px;
+        margin-top: 0;
+        @media (max-width: 991px) {
+            display: none;
+        }
+        @media (min-width: 992px) {
+            margin: -30px 0 0 190px;
+        }
+    }
+}
+/* --- Sticky Header --- */
+@media (min-width: 992px) {
+    #masthead {
+        transition: all 0.5s ease-in-out;
+        padding-bottom: 15px;
+    }
+    #masthead.sticky {
+        //transition: all 0.2s ease-in-out; //faster on the way out IF WE ADD THIS CLASS
+        position: fixed;
+        //background-color: white;
+        top: -140px; //hide at start
+        width: 100%;
+        z-index: 1000;
+        padding: 0;
+        &.compact {
+            box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.2);
+            .container {
+                padding: 5px 0 0 0;
+                border: none;
+            }
+            nav.navbar {
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+            }
+            .navbar-brand {
+                .logo {
+                    max-width: 70%;
+                }
+            }
+            .desktop-menu ul li {
+                border-bottom-width: 2px;
+            }
+            .menu a {
+                font-size: 0.8125rem;
+            }
+            hr {
+                display: none;
+            }
+        }
+    }
+}
+// No sticky header on mobile
+@media (max-width: 991px) {
+    #masthead.sticky {
+        display: none !important;
+    }
+}
+
+@media (max-width: 320px) {
+    a.navbar-brand {
+        max-width: 240px;
+    }
+}
+/* --- END Header --- */
+/* --- Menu --- */
+    
+nav.navbar {
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    .navbar-brand {
+        margin-right: 0;
+        img {
+            @media (max-width: 768px) {
+                max-width: 70%;
+            }
+        }
+    }
+    @media (max-width: 992px) {
+        border-bottom: 1px solid white;
+    }
+}
+// Nav links
+.navbar-light ul.navbar-nav {
+    .nav-link {
+        // font-family: $zilla;
+        // font-style: italic;
+        // color: $red;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9375rem;
+        @media (min-width: 1170px) {
+            padding-left: 0.8rem;
+            padding-right: 0.8rem;
+        }
+    }
+    .active>.nav-link,
+    .nav-link.active {
+        // color: red;
+    }
+}
+
+.navbar-light .navbar-toggler {
+    border: none;
+    span.navbar-toggler-icon {
+        background-image: none;
+        &::before {
+            font-family: $fontello;
+            content: "\F394";
+            color: grey;
+            font-size: 1.75rem;
+        }
+    }
+}
+
+// admin bar fix
+.admin-bar header.sticky {
+    top: 32px;
+}
+
+// mobile admin bar fix
+@media screen and (max-width: 782px) {
+    .admin-bar header.sticky {
+        top: 46px;
+    }
+}
+
+// Mobile Nav: add border like GBG:
+@media (max-width: 991px) {
+    .navbar-collapse {
+        border-top: 1px solid white;
+    }
+    #menu-main-menu li:last-child {
+        margin-top: 15px;
+    }
+}
+/* --- END Menu --- */
+
+/* --- Article content --- */
+.article-content {
+    //general content-area-only styles:
+    ul {
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+        li {
+            margin-bottom: 0.3rem;
+        }
+    }
+    //narrow text, wide images and galleries
+    &>* {
+        max-width: 700px;
+        @media( max-width: 992px) {
+            max-width: 600px;
+        }
+        margin-left: auto;
+        margin-right: auto;
+    }
+    //jQuery in spr.js adds .image-wide class to <p> tags that contain an image
+    p>img:not(.image-wide):not(.left) {
+        margin: 40px auto 40px auto !important;
+    }
+    // If an image has a caption it is NOT wrapped in a P tag, it's in a <figure>
+    p.image-wide,
+    .tiled-gallery,
+    figure.wp-caption {
+        max-width: 100%;
+        margin: 40px auto 40px auto !important;
+        text-align: center;
+    }
+    .wp-caption .wp-caption-text {
+        font-size: 0.875rem;
+    }
+    .jp-carousel-image-meta,
+    .jp-carousel-left-column-wrapper {
+        display: none;
+    }
+    
+    .jp-carousel-wrap .jp-carousel-info h2 {
+        font-weight: 500 !important;
+        font-size: 0.9375rem !important;
+    }    
+}
+/* --- END General --- */
+
+
+/* --- Contact page --- */
+    
+.contact-page-form {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+label,
+input,
+textarea {
+    width: 100%;
+    &:focus {
+        outline: none;
+    }
+}
+
+label {
+    background-color: transparent;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 5px 10px;
+}
+
+.wpcf7 label {
+    border: 1px solid grey;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='password'],
+textarea {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    font-size: 14px;
+}
+
+.wpcf7 {
+    input[type='submit'] {
+        float: left;
+        font-weight: 500;
+    }
+}
+
+%form-message {
+    border-radius: 3px;
+    padding: 30px !important;
+    color: #fff;
+    background: green;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    border: none !important;
+    text-align: center;
+    margin: 25px 0px !important;
+}
+
+.wpcf7-validation-errors {
+    border-color: red;
+}
+
+div.wpcf7-mail-sent-ok,
+div.wpcf7-validation-errors,
+div.wpcf7-response-output,
+{
+    @extend %form-message;
+}
+
+div.wpcf7 .ajax-loader {
+    background-image: url(images/loader.svg);
+    width: 50px;
+    height: 50px;
+    margin-top: -6px;
+}
+
+#contact-map {
+    width: 100%;
+    height: 485px;
+}
+/* --- END contact page --- */
+/* --- CTA --- */
+
+.cta {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .container {
+        max-width: 570px;
+        text-align: center;
+    }
+}
+
+.cta-text {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+/* --- END CTA --- */
+
+/* --- Footer and socket --- */
+.socket {
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 12px;
+    font-weight: 300;
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+
+/* --- END Footer and socket --- */

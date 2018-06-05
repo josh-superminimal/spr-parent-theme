@@ -1,0 +1,31 @@
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+ 
+  /* fix buttons height */
+  line-height: 1em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+}
+ 
+.icon-facebook-squared { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe94f;&nbsp;'); }
+.icon-ion-social-gplus { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe957;&nbsp;'); }
+.icon-noun-bag { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xeade;&nbsp;'); }
+.icon-ion-social-twitter { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf243;&nbsp;'); }
+.icon-shopping-basket { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf291;&nbsp;'); }
+.icon-ion-social-pinterest { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf2b1;&nbsp;'); }
+.icon-ion-social-instagram-outline { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf350;&nbsp;'); }
+.icon-ion-android-menu { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf394;&nbsp;'); }
+.icon-ion-ios-arrow-back { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf3cf;&nbsp;'); }
+.icon-ion-ios-arrow-down { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf3d0;&nbsp;'); }
+.icon-ion-ios-arrow-forward { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf3d1;&nbsp;'); }
+.icon-ion-ios-arrow-left { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf3d2;&nbsp;'); }
+.icon-ion-ios-arrow-right { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf3d3;&nbsp;'); }
+.icon-ion-ios-arrow-thin-down { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf3d4;&nbsp;'); }
+.icon-ion-ios-arrow-thin-left { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf3d5;&nbsp;'); }
+.icon-ion-ios-arrow-thin-right { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf3d6;&nbsp;'); }
+.icon-ion-ios-arrow-thin-up { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf3d7;&nbsp;'); }
+.icon-ion-ios-arrow-up { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf3d8;&nbsp;'); }
+.icon-ion-ios-search { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf4a5;&nbsp;'); }
