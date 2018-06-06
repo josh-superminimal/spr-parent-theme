@@ -1,6 +1,27 @@
 <?php
 
 /**
+ * Site top bar - really made to be overridden
+ */
+if ( ! function_exists( 'spr_do_top_bar' ) ) :
+    function spr_do_top_bar() { ?>
+        <section id="top-bar" class="py-2 px-lg-4 d-flex align-items-center">
+            <div class="container-fluid">
+                <div class="row">
+                <!-- justify-content-md-end -->
+                    <div class="d-flex col-5 justify-content-start align-items-center">
+                    <?php spr_do_link( '(08) 9485 0801', 'tel:+61 8 9485 0801', false ) ?></div>
+                    <div class="col-7 d-flex justify-content-end">Level 2, Trinity Arcade ( Hay Street Mall ), Perth</div>
+                </div>
+            </div>		
+        </section>
+    <?php }
+endif;
+
+
+
+
+/**
  * Call to action
  * @param string $cta_text The CTA text
  * @param string $btn_text The text in the button, default is 'Shop Now'
