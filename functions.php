@@ -117,10 +117,10 @@ function spr_widgets_init() {
 add_action( 'widgets_init', 'spr_widgets_init' );
 
 /**
- * Enqueue scripts and styles.
+ * Enqueue Parent Theme scripts and styles.
  */
 function spr_scripts() {
-	wp_enqueue_style( 'spr-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'spr-style', get_template_directory_uri() . '/style.min.css' );
 
 	wp_enqueue_script( 'spr-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -130,7 +130,6 @@ function spr_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-
 	wp_enqueue_script( 'spr-jquery', get_template_directory_uri() . '/js/jquery-3.2.1.min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'spr-bootstrap-js', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array(), '20151215', true );
@@ -138,19 +137,21 @@ function spr_scripts() {
 
 	wp_enqueue_style('spr-fontello-icons', get_template_directory_uri() . "/assets/fontello/css/fontello.css");
 
-	//ScrollReveal
+	// ScrollReveal
 	wp_enqueue_script( 'scrollreveal-js', get_template_directory_uri() . '/js/scrollreveal.min.js', array(), '20171013', true );	
 
-	//ZenScroll smooth scrolling to any link on the same page
+	// ZenScroll smooth scrolling to any link on the same page
 	wp_enqueue_script( 'zenscroll-js', get_template_directory_uri() . '/js/zenscroll-min.js', array(), '20170312', true );	
 
-	//custom theme JS
+	// custom theme JS
 	wp_enqueue_script( 'spr-custom-js', get_template_directory_uri() . '/js/superminimal.js', array(), '20180227', true );
 
+	// Custom parent theme styles
+	wp_enqueue_style( 'spr-custom-style', get_template_directory_uri() . '/custom.min.css' );	
 
-	wp_enqueue_style( 'spr-custom-style', get_template_directory_uri() . '/custom.css' );	
 }
-add_action( 'wp_enqueue_scripts', 'spr_scripts' );
+// IMPORTANT: To load CHILD THEME custom styles and scripts, give priority greater than 10!! 
+add_action( 'wp_enqueue_scripts', 'spr_scripts', 10);
 
 
 /**
@@ -190,6 +191,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Add theme support for excerpts.
+ */
+add_post_type_support( 'page', 'excerpt' );
+
+
 add_filter( 'body_class', 'spr_body_class_for_pages' );
 /**
  * Adds a css class to the body element
@@ -202,4 +209,5 @@ function spr_body_class_for_pages( $classes ) {
 		global $post;
 		$classes[] = $post->post_name;
 	}
+	return $classes;
 }

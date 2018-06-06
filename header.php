@@ -25,6 +25,17 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'spr' ); ?></a>
 
 
+	<section id="top-bar" class="py-0 px-lg-4 d-flex align-items-center">
+		<div class="container-fluid">
+			<div class="row">
+			<!-- justify-content-md-end -->
+				<div class="d-flex col-5 justify-content-start align-items-center">
+				<?php spr_do_link( '(08) 9485 0801', 'tel:+61 8 9485 0801', false ) ?></div>
+				<div class="col-7 d-flex justify-content-end">Level 2, Trinity Arcade ( Hay Street Mall ), Perth</div>
+			</div>
+		</div>		
+	</section>
+
 
 	<header id="masthead" class="site-header bg-cream">
 
