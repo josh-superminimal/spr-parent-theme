@@ -170,10 +170,13 @@ require get_template_directory() . '/inc/custom-header.php';
  */
 require get_template_directory() . '/inc/template-tags.php';
 
+// Our own custom template tags (not _s)
+require get_template_directory() . '/template-tags.php';
+
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
-require get_template_directory() . '/inc/template-functions.php';
+require get_template_directory() . '/template-functions.php';
 
 /**
  * Customizer additions.
