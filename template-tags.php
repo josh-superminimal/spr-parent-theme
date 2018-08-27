@@ -56,11 +56,25 @@ endif;
  * Get an image from theme images dir
  * @param string $filename.  The path will be prepended automatically.
  */
-if ( ! function_exists( 'spr_get_img' ) ) :
-    function spr_get_img( $filename ) {
+if ( ! function_exists( 'spr_get_img_link' ) ) :
+    function spr_get_img_link( $filename ) {
         return get_stylesheet_directory_uri() . '/images/' . $filename;
     } 
 endif;
+
+
+/**
+ * spr_do_img
+ * Output an image stored in template_dir/images/
+ * @param string $filename The image filename, 
+ * @param string $alt Alt text. Optional.
+ * @param string $classes Extra classes to be applied. Optional.
+ */
+if ( !function_exists('spr_do_img') ) {
+	function spr_do_img( $filename, $alt='', $classes='') { ?>
+		<img src="<?= get_stylesheet_directory_uri() ?>/images/<?= $filename ?>" alt="<?= $alt ?>" class="<?= $classes ?>">
+	<?php }
+}
 
 /**	
  * Just output a simple link, to save doing the annoying quotation mark thing each time
@@ -194,3 +208,16 @@ if ( ! function_exists( 'spr_get_featured_img_url' ) ) :
         return false;
     }
 endif;
+
+
+/**
+ * spr_do_footer
+ * Intended to be overridden in the child theme.
+ */
+if ( !function_exists('spr_do_footer') ) {
+	function spr_do_footer() {
+
+	}
+}
+
+

@@ -14,3 +14,4 @@ function spr_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'spr_pingback_header' );
+
