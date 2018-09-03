@@ -76,6 +76,20 @@ if ( !function_exists('spr_do_img') ) {
 	<?php }
 }
 
+/**
+ * spr_do_image - ALIAS of spr_do_img
+ * Output an image stored in template_dir/images/
+ * @param string $filename The image filename, 
+ * @param string $alt Alt text. Optional.
+ * @param string $classes Extra classes to be applied. Optional.
+ */
+if ( !function_exists('spr_do_image') ) {
+	function spr_do_image( $filename, $alt='', $classes='') {
+        spr_do_img( $filename, $alt, $classes );
+	}
+}
+
+
 /**	
  * Just output a simple link, to save doing the annoying quotation mark thing each time
  * @param string $text The link text, no default
