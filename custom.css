@@ -370,11 +370,6 @@ textarea {
   font-size: 14px;
 }
 
-.wpcf7 input[type='submit'] {
-  float: left;
-  font-weight: 500;
-}
-
 div.wpcf7-mail-sent-ok,
 div.wpcf7-validation-errors,
 div.wpcf7-response-output {

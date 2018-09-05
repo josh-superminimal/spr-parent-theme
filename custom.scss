@@ -20,11 +20,13 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
+
 /* --- Sass Vars --- */
+
 $fontello: 'Fontello';
 $transition: all 0.18s ease-in-out;
-/* --- END vars --- */
 
+/* --- END vars --- */
 
 body {
     font-size: 16px;
@@ -32,6 +34,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
+
 
 /* --- Accessibility - remember to replace these --- */
 
@@ -54,10 +57,13 @@ textarea:focus {
 .btn.focus {
     box-shadow: none;
 }
+
+
 /* --- End Accessibility --- */
 
+
 /* --- Links --- */
-    
+
 a,
 a i {
     transition: $transition;
@@ -85,9 +91,13 @@ a.anchor {
         text-decoration: underline;
     }
 }
+
+
 /* --- END Links --- */
 
+
 /* --- General --- */
+
 //only give margin P tags that follow anything else
 p {
     margin: 0;
@@ -95,6 +105,7 @@ p {
         margin-top: 1em;
     }
 }
+
 .italic {
     font-style: italic;
 }
@@ -151,12 +162,15 @@ section {
     flex-grow: 0;
 }
 
+
 /* --- END General --- */
 
 
 /* --- Header --- */
+
+
 /* --- Header / Sticky Header --- */
-    
+
 #masthead {
     transition: all 0.3s ease-in-out;
     hr {
@@ -171,7 +185,10 @@ section {
         }
     }
 }
+
+
 /* --- Sticky Header --- */
+
 @media (min-width: 992px) {
     #masthead {
         transition: all 0.5s ease-in-out;
@@ -212,6 +229,7 @@ section {
         }
     }
 }
+
 // No sticky header on mobile
 @media (max-width: 991px) {
     #masthead.sticky {
@@ -224,9 +242,13 @@ section {
         max-width: 240px;
     }
 }
+
+
 /* --- END Header --- */
+
+
 /* --- Menu --- */
-    
+
 nav.navbar {
     ul {
         padding: 0;
@@ -245,6 +267,7 @@ nav.navbar {
         border-bottom: 1px solid white;
     }
 }
+
 // Nav links
 .navbar-light ul.navbar-nav {
     .nav-link {
@@ -299,9 +322,13 @@ nav.navbar {
         margin-top: 15px;
     }
 }
+
+
 /* --- END Menu --- */
 
+
 /* --- Article content --- */
+
 .article-content {
     //general content-area-only styles:
     ul {
@@ -339,17 +366,18 @@ nav.navbar {
     .jp-carousel-left-column-wrapper {
         display: none;
     }
-    
     .jp-carousel-wrap .jp-carousel-info h2 {
         font-weight: 500 !important;
         font-size: 0.9375rem !important;
-    }    
+    }
 }
+
+
 /* --- END General --- */
 
 
 /* --- Contact page --- */
-    
+
 .contact-page-form {
     max-width: 480px;
     margin: 0 auto;
@@ -386,13 +414,12 @@ textarea {
     font-size: 14px;
 }
 
-.wpcf7 {
-    input[type='submit'] {
-        float: left;
-        font-weight: 500;
-    }
-}
-
+// .wpcf7 {
+//     input[type='submit'] {
+//         float: left;
+//         font-weight: 500;
+//     }
+// }
 %form-message {
     border-radius: 3px;
     padding: 30px !important;
@@ -427,7 +454,11 @@ div.wpcf7 .ajax-loader {
     width: 100%;
     height: 485px;
 }
+
+
 /* --- END contact page --- */
+
+
 /* --- CTA --- */
 
 .cta {
@@ -445,9 +476,12 @@ div.wpcf7 .ajax-loader {
     margin-bottom: 1rem;
 }
 
+
 /* --- END CTA --- */
 
+
 /* --- Footer and socket --- */
+
 .socket {
     text-align: center;
     padding: 30px 15px;
