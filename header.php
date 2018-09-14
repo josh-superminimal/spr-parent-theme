@@ -28,12 +28,12 @@
 	<?php spr_do_top_bar(); ?>
 
 
-	<header id="masthead" class="site-header bg-cream">
+	<header id="masthead" class="site-header">
 
-		<nav class="navbar navbar-expand-lg navbar-light bg-faded mx-3">
-			<a class="navbar-brand pb-3" href="<?= site_url() ?>">
+		<nav class="navbar navbar-expand-lg navbar-light mx-3">
+			<!-- <a class="navbar-brand pb-3" href="<?= site_url() ?>"> -->
 			<?php the_custom_logo(); ?>
-			</a>
+			<!-- </a> -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -54,7 +54,7 @@
 			?>
 		</nav>
 
-		<hr />
+		<hr class="divider" />
 
 	</header><!-- #masthead -->
 

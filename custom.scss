@@ -247,7 +247,7 @@ section {
 /* --- END Header --- */
 
 
-/* --- Menu --- */
+/* --- Menu --- Nav --- */
 
 nav.navbar {
     ul {
@@ -317,9 +317,6 @@ nav.navbar {
 @media (max-width: 991px) {
     .navbar-collapse {
         border-top: 1px solid white;
-    }
-    #menu-main-menu li:last-child {
-        margin-top: 15px;
     }
 }
 
