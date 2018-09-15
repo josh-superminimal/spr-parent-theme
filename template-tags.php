@@ -234,4 +234,14 @@ if ( !function_exists('spr_do_footer') ) {
 	}
 }
 
+/**
+ * spr_do_socket
+ */
+if ( !function_exists('spr_do_socket') ) {
+	function spr_do_socket() { ?>
+        <div class="site-info socket">
+        &copy; <?= date('Y') ?> <a href="<?= get_site_url() ?>"><?php bloginfo( 'name' ); ?></a> <span class="sep">/</span>  Site by <a href="https://superminimal.com.au" target="_blank" rel="noopener norefferrer">Super Minimal</a>
+        </div><!-- .site-info -->
+	<?php }
+}
 
