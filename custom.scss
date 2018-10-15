@@ -69,11 +69,11 @@ a i {
     transition: $transition;
 }
 
-a,
-a:visited,
-a:active,
-a:focus,
-a:hover {
+a:not(.btn),
+a:not(.btn):visited,
+a:not(.btn):active,
+a:not(.btn):focus,
+a:not(.btn):hover {
     color: inherit;
 }
 
