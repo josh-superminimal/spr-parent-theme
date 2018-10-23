@@ -106,7 +106,8 @@ section {
   }
 }
 
-.container-wide, .container-narrow, .container-extra-narrow {
+.container-wide, .container-narrow, .container-extra-narrow,
+.container-x-narrow {
   margin-right: auto;
   margin-left: auto;
 }
@@ -119,7 +120,8 @@ section {
   max-width: 1000px;
 }
 
-.container-extra-narrow {
+.container-extra-narrow,
+.container-x-narrow {
   max-width: 730px;
 }
 
