@@ -144,12 +144,10 @@ if ( ! function_exists( 'spr_do_content' ) ) :
             $post_id = $post->ID;
         }
         ?>
-        <div class="content">
-            <?php
-                $post = get_post( $post_id );
-                echo apply_filters( 'the_content', $post->post_content );
-            ?>
-        </div>
+        <?php
+            $post = get_post( $post_id );
+            echo apply_filters( 'the_content', $post->post_content );
+        ?>
     <?php }
 endif;
 
