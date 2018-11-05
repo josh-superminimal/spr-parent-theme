@@ -139,6 +139,17 @@ endif;
  */
 if ( ! function_exists( 'spr_do_content' ) ) :
     function spr_do_content( $post_id = '' ) {
+        echo spr_get_content( $post_id );
+    }
+endif;
+
+/**
+ * spr_get_content
+ * Get the content from a page or post (not echoed)
+ * @param post_id The id of the page or post that the content is from.
+ */
+if ( ! function_exists( 'spr_get_content' ) ) :
+    function spr_get_content( $post_id = '' ) {
         if ( empty( $post_id ) ) {
             global $post;
             $post_id = $post->ID;
@@ -146,7 +157,7 @@ if ( ! function_exists( 'spr_do_content' ) ) :
         ?>
         <?php
             $post = get_post( $post_id );
-            echo apply_filters( 'the_content', $post->post_content );
+            return apply_filters( 'the_content', $post->post_content );
         ?>
     <?php }
 endif;
