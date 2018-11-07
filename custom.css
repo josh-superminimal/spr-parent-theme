@@ -52,8 +52,11 @@ textarea:focus {
 /* --- End Accessibility --- */
 /* --- Links --- */
 a,
-a i {
+a i,
+input[type=submit],
+button {
   transition: all 0.18s ease-in-out;
+  cursor: pointer;
 }
 
 a:not(.btn),

@@ -65,8 +65,11 @@ textarea:focus {
 /* --- Links --- */
 
 a,
-a i {
+a i,
+input[type=submit],
+button {
     transition: $transition;
+    cursor: pointer;
 }
 
 a:not(.btn),
