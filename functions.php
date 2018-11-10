@@ -204,10 +204,21 @@ add_filter( 'body_class', 'spr_body_class_for_pages' );
  * @param  array $classes the current body classes
  * @return array $classes modified classes
  */
-function spr_body_class_for_pages( $classes ) {
-	if ( is_singular( 'page' ) ) {
-		global $post;
-		$classes[] = $post->post_name;
+if ( ! function_exists( 'spr_body_class_for_pages' ) ) {
+	function spr_body_class_for_pages( $classes ) {
+		if ( is_singular( 'page' ) ) {
+			global $post;
+			$classes[] = $post->post_name;
+		}
+	
+		if ( class_exists( 'woocommerce' ) ) {
+			global $woocommerce;
+			if( WC()->cart->cart_contents_count > 0 ){
+				$classes[]='items-in-cart';
+			} else {
+				$classes[]='cart-empty';
+			}	
+			return $classes;
+		}
 	}
-	return $classes;
 }
