@@ -345,12 +345,14 @@ nav.navbar .navbar-brand {
   margin: 0 auto;
 }
 
-input,
+input[type=text],
+input[type=email],
 textarea {
   width: 100%;
 }
 
-input:focus,
+input[type=text]:focus,
+input[type=email]:focus,
 textarea:focus {
   outline: none;
 }
