@@ -388,7 +388,6 @@ nav.navbar {
     margin: 0 auto;
 }
 
-label,
 input,
 textarea {
     width: 100%;
@@ -402,6 +401,9 @@ label {
     border-radius: 3px;
     font-size: 13px;
     padding: 5px 10px;
+    &:focus {
+        outline: none;
+    }
 }
 
 .wpcf7 label {

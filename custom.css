@@ -345,13 +345,11 @@ nav.navbar .navbar-brand {
   margin: 0 auto;
 }
 
-label,
 input,
 textarea {
   width: 100%;
 }
 
-label:focus,
 input:focus,
 textarea:focus {
   outline: none;
@@ -362,6 +360,10 @@ label {
   border-radius: 3px;
   font-size: 13px;
   padding: 5px 10px;
+}
+
+label:focus {
+  outline: none;
 }
 
 .wpcf7 label {
