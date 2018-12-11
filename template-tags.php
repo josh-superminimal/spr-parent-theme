@@ -200,13 +200,13 @@ endif;
  * https://codex.wordpress.org/Function_Reference/get_the_excerpt
  */
 if ( ! function_exists( 'spr_do_excerpt' ) ) :
-    function spr_do_excerpt( $post_id ) {
+    function spr_do_excerpt( $post_id, $limit = 30 ) {
         $post = get_post( $post_id );
         //DON'T use get_the_excerpt, if not set it will fail
         if ( $post->post_excerpt ) echo $post->post_excerpt;
         else {
             $content = apply_filters( 'the_content', $post->post_content ); //using the_content hook 
-            echo wp_trim_words( $content ); 		
+            echo wp_trim_words( $content, $limit ); 		
         }
     }
 endif;
