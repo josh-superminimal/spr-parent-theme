@@ -312,7 +312,7 @@ nav.navbar .navbar-brand {
   }
 }
 
-.article-content p > img:not(.image-wide):not(.left) {
+.article-content p > img:not(.image-wide):not(.left):not(.emoji) {
   margin: 40px auto 40px auto !important;
 }
 

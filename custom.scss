@@ -353,7 +353,7 @@ nav.navbar {
         margin-right: auto;
     }
     //jQuery in spr.js adds .image-wide class to <p> tags that contain an image
-    p>img:not(.image-wide):not(.left) {
+    p>img:not(.image-wide):not(.left):not(.emoji) {
         margin: 40px auto 40px auto !important;
     }
     // If an image has a caption it is NOT wrapped in a P tag, it's in a <figure>
