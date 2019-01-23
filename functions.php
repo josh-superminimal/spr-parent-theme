@@ -210,7 +210,6 @@ if ( ! function_exists( 'spr_body_class_for_pages' ) ) {
 			global $post;
 			$classes[] = $post->post_name;
 		}
-	
 		if ( class_exists( 'woocommerce' ) ) {
 			global $woocommerce;
 			if( WC()->cart->cart_contents_count > 0 ){
@@ -218,7 +217,7 @@ if ( ! function_exists( 'spr_body_class_for_pages' ) ) {
 			} else {
 				$classes[]='cart-empty';
 			}	
-			return $classes;
-		}
+		}				
+		return $classes;
 	}
 }
