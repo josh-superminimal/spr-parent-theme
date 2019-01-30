@@ -37,7 +37,7 @@ jQuery(window).scroll(function() {
 
 /**
  * ScrollReveal
- */
+ *
 jQuery(document).ready(function() {
 
     window.sr = ScrollReveal({
@@ -55,7 +55,7 @@ jQuery(document).ready(function() {
     });
 
 });
-
+*/
 jQuery(document).ready(function() {
 
     /*
