@@ -23,6 +23,10 @@ jQuery(document).ready(function() {
     var masthead_space = jQuery('#masthead').height() * -1;
     jQuery('#masthead').clone().addClass('compact sticky').insertAfter('#masthead');
     jQuery('#masthead.sticky').css("top", masthead_space + "px");
+
+    // Ensure keyboard tabbing doesn't cycle through both menus 
+    jQuery('#masthead.sticky a').attr("tabindex", -1);
+
 });
 
 // On scroll, slide down the compact version of the header
