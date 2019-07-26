@@ -131,7 +131,7 @@ function spr_scripts() {
 	}
 
 	// Causes stripe error! 
-	//	wp_enqueue_script( 'spr-jquery', get_template_directory_uri() . '/js/jquery-3.2.1.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'spr-jquery', get_template_directory_uri() . '/js/jquery-3.2.1.min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'spr-bootstrap-js', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array(), '20151215', true );
 	wp_enqueue_style( 'spr-bootstrap-css', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css' );
