@@ -130,8 +130,10 @@ function spr_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	// Causes stripe error! 
-	wp_enqueue_script( 'spr-jquery', get_template_directory_uri() . '/js/jquery-3.2.1.min.js', array(), '20151215', true );
+	// https://digwp.com/2009/06/including-jquery-in-wordpress-the-right-way/
+	// must be jquery NOT spr-jquery
+	wp_deregister_script('jquery');
+	wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery-3.2.1.min.js', array(), null, true);
 
 	wp_enqueue_script( 'spr-bootstrap-js', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array(), '20151215', true );
 	wp_enqueue_style( 'spr-bootstrap-css', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css' );
